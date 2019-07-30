@@ -63,7 +63,6 @@ on the application you will need to clone the repository into your own git accou
 </ol>
 
 <h2>Using Branches</h2>
-
 <h3>Scenario:</h3>
 <p>You have a master remote branch that is stored on github.</p>
 <ol>
@@ -71,21 +70,16 @@ on the application you will need to clone the repository into your own git accou
 </li>
 <li>2nd Developer has a local copy of the remote master (local master)</li>
 </ol>
-</br>
 <p>Each developer can now leave the master branch as is which means that there are effectively 3 versions of the master branch:</p>
 <ol>
 <li>GitHub: origin/master (remote)</li>
 <li>Main Developer: origin/master (local to their laptop)</li>
 <li>2nd Developer: origin/master (local to their laptop)</li>
 </ol>
-
 <p>All three versions contain the same code for now.</p>
-</br>
 <p>Then each developer decides to make their own changes and so they both create their own unique local branch of the local origin/master version they have on their local machines.</p>
-</br>
 <p>The main developer creates a local branch called: changeABC_branc</p>
 <p>The 2nd developer creates a local branch called: changeXYZ_branch.</p>
-</br>
 <p>In our scenario we now have the following branches:</p>
 <p>GitHub:</p>
 <ol> 
@@ -101,18 +95,13 @@ on the application you will need to clone the repository into your own git accou
 	<li>origin/master (local to their laptop)</li>
 	<li>changeXYZ_branch(local to their laptop)</li>
 </ol>
-</br>
 <p>The idea with each developer creating a branch for each change is that they can make the change in this branch and then before committing to the remote repository the can pull any changes made by other developers to their local origin/master branch. Then they can try to merge the changes from, for example changeXYZ_branch, locally and test if their changes will work with the other developers recent changes.</p>
-</br>
 <p>This helps in scenarios where the main developer has mase changes yesterday and you want to merger your changes with his. In this scenario, after you've finished working on your custom branch, you simply</p>
-</br>
 <p>
 	Change back from the changeXYZ_branch to the origin/master branch.
 </p>
 <img src="img/branch_001.png" alt="branch_001">
-</br>
 <img src="img/branch_002.png" alt="branch_002">
-</br>
 <p>
 	Then you pull/ fetch the changes from the remote origin/master branch to make sure you have the most up to date changes from the remote repository on GitHub.
 </p>
