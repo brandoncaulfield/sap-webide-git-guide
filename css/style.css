@@ -2,7 +2,7 @@ body {
 	background: #FFF;
 	font-family: Georgia, Times New Roman, Times, serif;
 	font-size: 17px;
-	/*text-align: center;*/
+	text-align: center;
 	margin: 0;
 	padding-left: 10px
 
@@ -13,6 +13,9 @@ img {
 	padding: 10px;
 	max-width: 50%;
 	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 20px;
 }
 
 h1 {
@@ -35,12 +38,21 @@ p {
 }
 
 ol {
-line-height: 200%;
+	line-height: 200%;
 }
 
 ul {
 	line-height: 200%;
 	list-style: none;
+}
+
+code {
+	background-color: #000;
+	font-style: normal;
+	border-radius: 10px;
+	color: white;
+	padding: 5px 15px;
+	font-family: menlo, monospace;
 }
 
 .scrollblock {
@@ -52,50 +64,3 @@ ul {
 	padding-bottom: 80px;
 }
 
-
-
-/* Old CSS
-
-
-img {
-	display: block;
-	padding: 10px;
-	max-width: 50%;
-	height: auto;
-}
-
-h1 {
-	font-family: 'Open Sans', serif;
-}
-
-
-h2 {
-	font-family: 'Open Sans', serif;
-}
-
-h3 {
-	font-family: 'Open Sans', serif;
-}
-
-p {
-	margin: auto;
-	color: #000;
-	line-height: 200%;
-}
-
-ol {
-	line-height: 200%;
-}
-
-ul {
-	line-height: 200%;
-}
-
-.scrollblock {
-	/*position: relative;*/
-	/*margin: 0;*/
-	/*width: 100%;*/
-	/*color: white;*/
-	/*padding-top: 80px;*/
-	/*padding-bottom: 80px;*/
-/*}*/
