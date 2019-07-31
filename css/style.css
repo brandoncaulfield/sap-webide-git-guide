@@ -1,3 +1,12 @@
+body {
+	background: #FFF;
+	font-family: Georgia, Times New Roman, Times, serif;
+	font-size: 17px;
+	/*text-align: center;*/
+	margin: 0;
+	padding-left: 10px
+
+}
 
 img {
 	display: block;
@@ -20,23 +29,25 @@ h3 {
 }
 
 p {
-	margin: auto;
+	margin: 20px auto;
 	color: #000;
 	line-height: 200%;
+	padding: 10px
 }
 
 ol {
-	line-height: 200%;
+line-height: 200%;
 }
 
 ul {
 	line-height: 200%;
+	list-style: none;
 }
 
 .scrollblock {
-	/*position: relative;*/
-	/*margin: 0;*/
-	/*width: 100%;*/
+	position: relative;
+	margin: 0;
+	width: 100%;
 	/*color: white;*/
 	/*padding-top: 80px;*/
 	padding-bottom: 80px;
