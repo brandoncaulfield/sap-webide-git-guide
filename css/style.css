@@ -2,8 +2,42 @@
 img {
 	display: block;
 	padding: 10px;
+	max-width: 50%;
+	height: auto;
 }
 
-p h1 h2 h3 {
-	font-family: 'Roboto', serif;
+h1 {
+	font-family: 'Open Sans', serif;
+}
+
+
+h2 {
+	font-family: 'Open Sans', serif;
+}
+
+h3 {
+	font-family: 'Open Sans', serif;
+}
+
+p {
+	margin: auto;
+	color: #000;
+	line-height: 200%;
+}
+
+ol {
+	line-height: 200%;
+}
+
+ul {
+	line-height: 200%;
+}
+
+.scrollblock {
+	/*position: relative;*/
+	/*margin: 0;*/
+	/*width: 100%;*/
+	/*color: white;*/
+	/*padding-top: 80px;*/
+	padding-bottom: 80px;
 }
