@@ -2,121 +2,120 @@
 <html>
 
 <head>
-
-<link rel="stylesheet" type="text/css" href="css/style.css">
-
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
 
-<div class="intro">
-<h1>SAP WebIDE Git Guide</h1>
+	<div class="scrollblock">
+		<h1>SAP WebIDE Git Guide</h1>
+		<p>
+			This is a guide to help you out if you're new to using Git with SAP WebIDE
+		</p>
+		<p>
+			If you're unsure of the meaning of any Git terms, for example "Pull" or "Push", then take a look at the <a href="https://help.github.com/en/articles/github-glossary">GitHub glossary</a>.
+		</p>
+		<p>
+			If you are new to Git make sure you read this guide first - <a href="https://rogerdudler.github.io/git-guide/" target="_blank">Git - the simple guide </a>by <a href="http://www.twitter.com/rogerdudler" target="_blank">Roger Dudler</a>.
+		</p>
+		<p>
+			Another useful blog post from SCN - <a href="https://developers.sap.com/uk/tutorials/webide-github-import-project.html" target="_blank">SCN Tutorial</a>
+		</p>
+		<p>
+			Please report any issues on <a href="https://github.com/brandoncaulfield/sap-webide-git-guide" target="_blank">github</a>
+		</p>
+	</div>
 
-<p>This is a guide to help you out if you're new to using Git with SAP WebIDE</p>
+	<div class="scrollblock">
+		<h2>Important Concepts in SAP WebIDE</h2>
 
-<p>If you're unsure of the meaning of any Git terms, for example "Pull" or "Push", then take a look at the <a href="https://help.github.com/en/articles/github-glossary">GitHub glossary</a>.</p>
+		<p>	
+			SAP WebIDE allows you to create a git repository for each project you work on. 
+			The creation of the repository is controlled by SAP WebIDE and if you want to work 
+			on the application you will need to clone the repository into your own git account.
+		<p/>
 
-<p>If you are new to Git make sure you read this guide first - <a href="https://rogerdudler.github.io/git-guide/" target="_blank">Git - the simple guide </a>by <a href="http://www.twitter.com/rogerdudler" target="_blank">Roger Dudler</a>.</p>
+			<p>
+				Remeber, you have to commit and also push your changes to the remote repository if you want other developers to see your changes.
+			</p>
 
-<p>Another useful blog post from SCN - <a href="https://developers.sap.com/uk/tutorials/webide-github-import-project.html" target="_blank">SCN Tutorial</a></p>
+			<h3> Here's a short video guide from SAP if you dont feel like reading.</h3> 
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/pNQzxlUBbKg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+		</div>
 
-<p>Please report any issues on <a href="https://github.com/brandoncaulfield/sap-webide-git-guide" target="_blank">github</a></p>
+		<h2>Git Guide: initial creation</h2>
+		<h3>Create local repository in WebIDE</h3>
+		<ol>
+			<li>In SCP create the remote Git repository (for the required URL)</li>	
+			<li>Then in WebIDE we set the remote repository for the app from the step above</li>
+			<img src="img/set_remote_001.png" alt="set_remote_001">
+			<img src="img/set_remote_002.png" alt="set_remote_002">
+			<img src="img/set_remote_003.png" alt="set_remote_003">
+			<li>First pull from the newly created remote repository to merge your initial files with the remote master.</li>
+			<img src="img/pull_001.png" alt="pull_001">
+			<li>Then push any changes you migh'tve made or just push anyway to be safe</li>
+			<img src="img/push_001.png" alt="push_001">
+			<img src="img/push_002.png" alt="push_002">
+			<img src="img/push_003.png" alt="push_003">
+			<li>From there another user should be able to clone the newly created remote repository</li>
+		</ol>
+	</div>
 
 
-
-<h2>Important Concepts in SAP WebIDE</h2>
-
-<p>SAP WebIDE allows you to create a git repository for each project you work on. 
-The creation of the repository is controlled by SAP WebIDE and if you want to work 
-on the application you will need to clone the repository into your own git account.<p/>
-
-<p>Remebr, you have to commit and also push your changes to the remote repository if you want other developers to see your changes.</p>
-
-<h3> Here's a short video guide from SAP if you dont feel like reading.</h3> 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pNQzxlUBbKg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-</div>
-
-<h2>Git Guide: initial creation</h2>
-<h3>Create local repository in WebIDE</h3>
-<ol>
-</br>
-<li>In SCP create the remote Git repository (for the required URL)</li>	
-</br>
-<li>Then in WebIDE we set the remote repository for the app from the step above</li>
-</br>
-<img src="img/set_remote_001.png" alt="set_remote_001">
-<img src="img/set_remote_002.png" alt="set_remote_002">
-<img src="img/set_remote_003.png" alt="set_remote_003">
-</br>
-<li>First pull from the newly created remote repository to merge your initial files with the remote master.</li>
-</br>
-<img src="img/pull_001.png" alt="pull_001">
-</br>
-<li>Then push any changes you migh'tve made or just push anyway to be safe</li>
-</br>
-<img src="img/push_001.png" alt="push_001">
-<img src="img/push_002.png" alt="push_002">
-<img src="img/push_003.png" alt="push_003">
-</br>
-<li>From there another user should be able to clone the newly created remote repository</li>
-</br>
-</ol>
-
-<h2>Using Branches</h2>
-<h3>Scenario:</h3>
-<p>You have a master remote branch that is stored on github.</p>
-<ol>
-<li>Main Developer: has a local copy of the remote master (local master) that they put there originally using the set remote button/command.
-</li>
-<li>2nd Developer has a local copy of the remote master (local master)</li>
-</ol>
-<p>Each developer can now leave the master branch as is which means that there are effectively 3 versions of the master branch:</p>
-<ol>
-<li>GitHub: origin/master (remote)</li>
-<li>Main Developer: origin/master (local to their laptop)</li>
-<li>2nd Developer: origin/master (local to their laptop)</li>
-</ol>
-<p>All three versions contain the same code for now.</p>
-<p>Then each developer decides to make their own changes and so they both create their own unique local branch of the local origin/master version they have on their local machines.</p>
-<p>The main developer creates a local branch called: changeABC_branc</p>
-<p>The 2nd developer creates a local branch called: changeXYZ_branch.</p>
-<p>In our scenario we now have the following branches:</p>
-<p>GitHub:</p>
-<ol> 
-<li>origin/master (remote on GitHub servers)</li>
-</ol>
-<p>Main Developer:</p> 
-<ol>
-	<li>origin/master (local to their laptop)</li>
-	<li>changeABC_branch (local to their laptop)</li>
-</ol>
-<p>2nd Developer:</p>
-<ol>
-	<li>origin/master (local to their laptop)</li>
-	<li>changeXYZ_branch(local to their laptop)</li>
-</ol>
-<p>The idea with each developer creating a branch for each change is that they can make the change in this branch and then before committing to the remote repository the can pull any changes made by other developers to their local origin/master branch. Then they can try to merge the changes from, for example changeXYZ_branch, locally and test if their changes will work with the other developers recent changes.</p>
-<p>This helps in scenarios where the main developer has mase changes yesterday and you want to merger your changes with his. In this scenario, after you've finished working on your custom branch, you simply</p>
-<p>
-	Change back from the changeXYZ_branch to the origin/master branch.
-</p>
-<img src="img/branch_001.png" alt="branch_001">
-<img src="img/branch_002.png" alt="branch_002">
-<p>
-	Then you pull/ fetch the changes from the remote origin/master branch to make sure you have the most up to date changes from the remote repository on GitHub.
-</p>
-</br>
-<img src="img/branch_003.png" alt="branch_003">
-</br>
-<p>
-	Then you merge your origin/master branch with the remote origin/master by clicking on the merge button.
-</p>
-</br>
-<img src="img/branch_004.png" alt="branch_004">
-</br>
-<p>
-	After the merge has completed you can go and check a source code file to see if the code has been updated with changes you don’t recognise (which are most likely changes made and pushed to the remote repository by the other developer).
-</p>
+	<div class="scrollblock">
+		<h2>Using Branches</h2>
+		<h3>Scenario:</h3>
+		<p>You have a master remote branch that is stored on github.</p>
+		<ol>
+			<li>Main Developer: has a local copy of the remote master (local master) that they put there originally using the set remote button/command.
+			</li>
+			<li>2nd Developer has a local copy of the remote master (local master)</li>
+		</ol>
+		<p>Each developer can now leave the master branch as is which means that there are effectively 3 versions of the master branch:</p>
+		<ol>
+			<li>GitHub: origin/master (remote)</li>
+			<li>Main Developer: origin/master (local to their laptop)</li>
+			<li>2nd Developer: origin/master (local to their laptop)</li>
+		</ol>
+		<p>All three versions contain the same code for now.</p>
+		<p>Then each developer decides to make their own changes and so they both create their own unique local branch of the local origin/master version they have on their local machines.</p>
+		<p>The main developer creates a local branch called: changeABC_branc</p>
+		<p>The 2nd developer creates a local branch called: changeXYZ_branch.</p>
+		<p>In our scenario we now have the following branches:</p>
+		<p>GitHub:</p>
+		<ol> 
+			<li>origin/master (remote on GitHub servers)</li>
+		</ol>
+		<p>Main Developer:</p> 
+		<ol>
+			<li>origin/master (local to their laptop)</li>
+			<li>changeABC_branch (local to their laptop)</li>
+		</ol>
+		<p>2nd Developer:</p>
+		<ol>
+			<li>origin/master (local to their laptop)</li>
+			<li>changeXYZ_branch(local to their laptop)</li>
+		</ol>
+		<p>The idea with each developer creating a branch for each change is that they can make the change in this branch and then before committing to the remote repository the can pull any changes made by other developers to their local origin/master branch. Then they can try to merge the changes from, for example changeXYZ_branch, locally and test if their changes will work with the other developers recent changes.</p>
+		<p>This helps in scenarios where the main developer has mase changes yesterday and you want to merger your changes with his. In this scenario, after you've finished working on your custom branch, you simply</p>
+		<p>
+			Change back from the changeXYZ_branch to the origin/master branch.
+		</p>
+		<img src="img/branch_001.png" alt="branch_001">
+		<img src="img/branch_002.png" alt="branch_002">
+		<p>
+			Then you pull/ fetch the changes from the remote origin/master branch to make sure you have the most up to date changes from the remote repository on GitHub.
+		</p>
+		<img src="img/branch_003.png" alt="branch_003">
+		<p>
+			Then you merge your origin/master branch with the remote origin/master by clicking on the merge button.
+		</p>
+		<img src="img/branch_004.png" alt="branch_004">
+		<p>
+			After the merge has completed you can go and check a source code file to see if the code has been updated with changes you don’t recognise (which are most likely changes made and pushed to the remote repository by the other developer).
+		</p>
+	</div>
 
 </body>
 </html>
