@@ -14,10 +14,10 @@
 			This is a guide to help you out if you're new to using Git with SAP WebIDE
 		</p>
 		<p>
-			If you're unsure of the meaning of any Git terms, for example <code>pull</code> or <code>push</code>, then take a look at the <a href="https://help.github.com/en/articles/github-glossary">GitHub glossary</a>.
+			If you are new to Git make sure you read this guide first - <a href="https://rogerdudler.github.io/git-guide/" target="_blank">Git - the simple guide </a>by <a href="http://www.twitter.com/rogerdudler" target="_blank">Roger Dudler</a>.
 		</p>
 		<p>
-			If you are new to Git make sure you read this guide first - <a href="https://rogerdudler.github.io/git-guide/" target="_blank">Git - the simple guide </a>by <a href="http://www.twitter.com/rogerdudler" target="_blank">Roger Dudler</a>.
+			If you're unsure of the meaning of any Git terms, for example <code>pull</code> or <code>push</code>, then take a look at the <a href="https://help.github.com/en/articles/github-glossary">GitHub glossary</a>.
 		</p>
 		<p>
 			Useful set of blog posts from SCN - <a href="https://developers.sap.com/group.webide-github.html?source=social-global-sap-developers-linkedin_company-audienceengagement-developers-unspecified-spr-2501943492&campaigncode=CRM-XB19-MKT-DGETUT" target="_blank">SCN Tutorial Group</a>
@@ -31,26 +31,45 @@
 	</div>
 
 	<div class="scrollblock block-concepts">
-		<h2>Important Concepts in SAP WebIDE</h2>
-
+		<h1>Important Concepts in SAP WebIDE</h1>
 		<p>	
-			SAP WebIDE allows you to create a git repository for each project you work on. 
-			The creation of the repository is controlled by SAP WebIDE. If you want to work 
-			on an application that you did not create yourself from the WebIDE you will need to clone the repository. Once you have made your changes you have to <a href="">pull</a> the changes from the remote repository first into your local origin/master, merge your changes and fix any issues and then only push your changes to the remote repository if you want other developers to see your changes.
+			SAP WebIDE allows you to create a git repository for each project you work on and the creation of the repository is controlled from within the SAP WebIDE itself. If you want to work 
+			on an application (that you did not create yourself) from the WebIDE then you will need to clone the repository as you would any other normal git repository. Once you have made your changes you have to first <code>pull</code> the latest version from the remote repository into your local origin/master, merge your changes, fix any issues and then only push your changes to the remote repository if you want other developers to see your changes.
+		</p><br />
+		<p>
+			When in the SAP WebIDE you'll find most of what you need in the Git Menu near the top right of the screen. You'll also find the console towards the bottom right of the screen which can be very useful when trying to see what happened as you interact with the git repository.
+		</p> 
+		<img src="img/concepts_001.png" alt="concepts_001">
+		<p>A great way to see if you've successfully pushed your changes to the remote repository is to  download the Git desktop client and clone the repositroy from there. Once you have the files on your desktop you can open them in your favourite IDE and see if your changes are there. 
 		</p>
+		<br />
+		<p>
+			When creating a new UI5 app the web IDE will create a remote repository for you. This URL is what will be used when you <code>set remote</code> your newly created repository with the remote repository on GitHubs servers.
+		</p>
+		<img src="img/concepts_002.png" alt="concepts_002">
+		<p>
+			In the SAP Cloud Platform Cockpit you'll find the remote Git repository link under the versioning section after you've clicked on the HTML5 app itself.
+		<img src="img/concepts_003.png" alt="concepts_003">
 	</div>
 
 	<div class="scrollblock block-initial_creation">
-		<h2>Initial Repository Creation</h2>
+		<h1>Initial Repository Creation</h1>
+		<p>
+			<code>initialize local repository</code><br />
+			to create a new git repository.
+		</p>
+		<img src="img/initialize_001.png" alt="initialize_001">
+		<img src="img/initialize_002.png" alt="initialize_002">
+		<img src="img/initialize_003.png" alt="initialize_003">
 		<p>
 			<code>Set Remote</code><br />
-			to create a new git repository
+			to push your changes to the GitHub remote server.
 		</p>
 		<img src="img/set_remote_001.png" alt="set_remote_001">
 		<img src="img/set_remote_002.png" alt="set_remote_002">
 		<img src="img/set_remote_003.png" alt="set_remote_003">
 		<p>
-			<br /><code>Pull and Merge</code><br />
+			<br /><code>Pull</code> and <code>Merge</code><br />
 			to perform an initial sync of your local repository with the remote git repositroy.
 		</p>
 		<img src="img/pull_001.png" alt="pull_001">
