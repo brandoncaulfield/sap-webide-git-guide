@@ -17,7 +17,7 @@
 			If you are new to Git make sure you read this guide first - <a href="https://rogerdudler.github.io/git-guide/" target="_blank">Git - the simple guide </a>by <a href="http://www.twitter.com/rogerdudler" target="_blank">Roger Dudler</a>.
 		</p>
 		<p>
-			If you're unsure of the meaning of any Git terms, for example <code>pull</code> or <code>push</code>, then take a look at the <a href="https://help.github.com/en/articles/github-glossary">GitHub glossary</a>.
+			If you're unsure of the meaning of any Git terms, for example <code>pull</code> or <code>push</code>, then take a look at the <a href="https://help.github.com/en/articles/github-glossary" target="_blank">GitHub glossary</a>.
 		</p>
 		<p>
 			Useful set of blog posts from SCN - <a href="https://developers.sap.com/group.webide-github.html?source=social-global-sap-developers-linkedin_company-audienceengagement-developers-unspecified-spr-2501943492&campaigncode=CRM-XB19-MKT-DGETUT" target="_blank">SCN Tutorial Group</a>
@@ -36,6 +36,19 @@
 			SAP WebIDE allows you to create a git repository for each project you work on and the creation of the repository is controlled from within the SAP WebIDE itself. If you want to work 
 			on an application (that you did not create yourself) from the WebIDE then you will need to clone the repository as you would any other normal git repository. Once you have made your changes you have to first <code>pull</code> the latest version from the remote repository into your local origin/master, merge your changes, fix any issues and then only push your changes to the remote repository if you want other developers to see your changes.
 		</p><br />
+		<h2>Important git commands</h2>
+		<p>
+			<code>pull</code><br />
+			Pull refers to when you are fetching in changes and merging them. For instance, if someone has edited the remote file you're both working on, you'll want to pull in those changes to your local copy so that it's up to date.
+		</p>
+		<p>
+			<code>fetch</code><br />
+			Fetching refers to getting the latest changes from an online repository without merging them in. Once these changes are fetched you can compare them to your local branches (the code residing on your local machine).
+		</p>
+		<p>
+			<code>push</code><br />
+			Pushing refers to sending your committed changes to a remote repository, such as a repository hosted on GitHub. For instance, if you change something locally, you'd want to then push those changes so that others may access them.
+		</p>
 		<p>
 			When in the SAP WebIDE you'll find most of what you need in the Git Menu near the top right of the screen. You'll also find the console towards the bottom right of the screen which can be very useful when trying to see what happened as you interact with the git repository.
 		</p> 
