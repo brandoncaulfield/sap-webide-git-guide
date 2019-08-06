@@ -25,6 +25,9 @@
 		<p>
 			Please report any issues on <a href="https://github.com/brandoncaulfield/sap-webide-git-guide" target="_blank">github</a>
 		</p>
+		<p>
+				by <a href="https://uk.linkedin.com/in/brandon-caulfield-02554a3a" target="_blank">Brandon Caulfield</a>
+		</p>
 
 		<h3>A short video guide from SAP</h3> 
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/pNQzxlUBbKg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
@@ -101,62 +104,3 @@
 	</div>
 
 
-	<div class="scrollblock block-branches">
-		<h2>Using Branches</h2>
-		<h3>Scenario:</h3>
-		<p>You have a master remote branch that is stored on github.</p>
-		<ul>
-			<li>Main Developer: has a local copy of the remote master (local master) that they put there originally using <code>set remote</code>.</li>
-			<li>2nd Developer has a local copy of the remote master (local master)</li>
-		</ul>
-		<p>
-			Each developer can now leave the master branch as is which means that there are effectively 3 versions of the master branch:
-		</p>
-		<ul>
-			<li><b>GitHub:</b></li> 
-			<li>origin/master (remote on GitHub servers)</li>
-		</ul>
-		<ul>
-			<li><b>Main Developer</b></li> 
-				<li>origin/master (local)</li>
-			</ul>
-			<ul>
-				<li><b>2nd Developer:</b></li> 
-					<li>origin/master (local)</li>
-				</ul>
-				<p>
-				All three versions contain the same code for now. Then each developer decides to make their own changes and so they both create their own unique local branch of the local origin/master version they have on their local machines.The main developer creates a local branch called changeABC_branch and the 2nd developer creates a local branch called changeXYZ_branch. In our scenario we now have the following branches:</p>
-				<ul>
-					<li><b>GitHub:</b></li>
-					<li>origin/master (remote on GitHub servers)</li>
-				</ul>
-				<ul>
-					<li><b>Main Developer:</b></li> 
-					<li>origin/master (local)</li>
-					<li>changeABC_branch (local)</li>
-				</ul>
-				<ul>
-					<li><b>2nd Developer:</b></li>
-					<li>origin/master (local)</li>
-					<li>changeXYZ_branch(local)</li>
-				</ul>
-				<p>
-					The idea with each developer creating a branch for each change is that they can make the change in this branch and then before committing to the remote repository they can pull any changes made by other developers to their local origin/master branch. Then they can try to merge the changes from, for example changeXYZ_branch, locally and test if their changes will work with the other developers recent changes. This helps in scenarios where the main developer has made changes yesterday and you want to merger your changes with his. In this scenario, after you've finished working on your custom branch, you simply change back from the changeXYZ_branch to the origin/master branch.
-				</p>
-				<img src="img/branch_001.png" alt="branch_001">
-				<img src="img/branch_002.png" alt="branch_002">
-				<p>
-					<code>pull</code> / <code>fetch</code><br /> the changes from the remote origin/master branch to make sure you have the most up to date changes from the remote repository on GitHub.
-				</p>
-				<img src="img/branch_003.png" alt="branch_003">
-				<p>
-					<code>merge</code><br /> your origin/master branch with the remote origin/master by clicking on the merge button.
-				</p>
-				<img src="img/branch_004.png" alt="branch_004">
-				<p>
-					After the merge has completed you can go and check the source code files to see if the code has been updated with changes you don’t recognise (which are most likely changes made and pushed to the remote repository by the another developer).
-				</p>
-			</div>
-
-		</body>
-		</html>
