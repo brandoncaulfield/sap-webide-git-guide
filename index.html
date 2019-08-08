@@ -2,6 +2,16 @@
 <html>
 
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145337178-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-145337178-1');
+	</script>
+
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -14,60 +24,85 @@
 			This is a guide to help you out if you're new to using Git with SAP WebIDE
 		</p>
 		<p>
-			If you are new to Git make sure you read this guide first - <a href="https://rogerdudler.github.io/git-guide/" target="_blank">Git - the simple guide </a>by <a href="http://www.twitter.com/rogerdudler" target="_blank">Roger Dudler</a>.
+			If you are new to Git make sure you read this guide first - <a
+				href="https://rogerdudler.github.io/git-guide/" target="_blank">Git - the simple guide </a>by <a
+				href="http://www.twitter.com/rogerdudler" target="_blank">Roger Dudler</a>.
 		</p>
 		<p>
-			If you're unsure of the meaning of any Git terms, for example <code>pull</code> or <code>push</code>, then take a look at the <a href="https://help.github.com/en/articles/github-glossary" target="_blank">GitHub glossary</a>.
+			If you're unsure of the meaning of any Git terms, for example <code>pull</code> or <code>push</code>, then
+			take a look at the <a href="https://help.github.com/en/articles/github-glossary" target="_blank">GitHub
+				glossary</a>.
 		</p>
 		<p>
-			Useful set of blog posts from SCN - <a href="https://developers.sap.com/group.webide-github.html?source=social-global-sap-developers-linkedin_company-audienceengagement-developers-unspecified-spr-2501943492&campaigncode=CRM-XB19-MKT-DGETUT" target="_blank">SCN Tutorial Group</a>
+			Useful set of blog posts from SCN - <a
+				href="https://developers.sap.com/group.webide-github.html?source=social-global-sap-developers-linkedin_company-audienceengagement-developers-unspecified-spr-2501943492&campaigncode=CRM-XB19-MKT-DGETUT"
+				target="_blank">SCN Tutorial Group</a>
 		</p>
 		<p>
-			Please report any issues on <a href="https://github.com/brandoncaulfield/sap-webide-git-guide" target="_blank">github</a>
+			Please report any issues on <a href="https://github.com/brandoncaulfield/sap-webide-git-guide"
+				target="_blank">github</a>
 		</p>
 		<p>
-				by <a href="https://uk.linkedin.com/in/brandon-caulfield-02554a3a" target="_blank">Brandon Caulfield</a>
+			by <a href="https://uk.linkedin.com/in/brandon-caulfield-02554a3a" target="_blank">Brandon Caulfield</a>
 		</p>
 
-		<h3>A short video guide from SAP</h3> 
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/pNQzxlUBbKg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+		<h3>A short video guide from SAP</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/pNQzxlUBbKg" frameborder="0"
+			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 
 	<div class="scrollblock block-concepts">
 		<h1>Important Concepts in SAP WebIDE</h1>
-		<p>	
-			SAP WebIDE allows you to create a git repository for each project you work on and the creation of the repository is controlled from within the SAP WebIDE itself. If you want to work 
-			on an application (that you did not create yourself) from the WebIDE then you will need to clone the repository as you would any other normal git repository. Once you have made your changes you have to first <code>pull</code> the latest version from the remote repository into your local origin/master, merge your changes, fix any issues and then only push your changes to the remote repository if you want other developers to see your changes.
+		<p>
+			SAP WebIDE allows you to create a git repository for each project you work on and the creation of the
+			repository is controlled from within the SAP WebIDE itself. If you want to work
+			on an application (that you did not create yourself) from the WebIDE then you will need to clone the
+			repository as you would any other normal git repository. Once you have made your changes you have to first
+			<code>pull</code> the latest version from the remote repository into your local origin/master, merge your
+			changes, fix any issues and then only push your changes to the remote repository if you want other
+			developers to see your changes.
 		</p><br />
 		<h2>Important git commands</h2>
 		<p>
 			<code>pull</code><br />
-			Pull refers to when you are fetching in changes and merging them. For instance, if someone has edited the remote file you're both working on, you'll want to pull in those changes to your local copy so that it's up to date.
+			Pull refers to when you are fetching in changes and merging them. For instance, if someone has edited the
+			remote file you're both working on, you'll want to pull in those changes to your local copy so that it's up
+			to date.
 		</p>
 		<p>
 			<code>fetch</code><br />
-			Fetching refers to getting the latest changes from an online repository without merging them in. Once these changes are fetched you can compare them to your local branches (the code residing on your local machine).
+			Fetching refers to getting the latest changes from an online repository without merging them in. Once these
+			changes are fetched you can compare them to your local branches (the code residing on your local machine).
 		</p>
 		<p>
 			<code>push</code><br />
-			Pushing refers to sending your committed changes to a remote repository, such as a repository hosted on GitHub. For instance, if you change something locally, you'd want to then push those changes so that others may access them.
+			Pushing refers to sending your committed changes to a remote repository, such as a repository hosted on
+			GitHub. For instance, if you change something locally, you'd want to then push those changes so that others
+			may access them.
 		</p>
 		<br />
 		<p>
-			When in the SAP WebIDE you'll find most of what you need in the Git Menu near the top right of the screen. You'll also find the console towards the bottom right of the screen which can be very useful when trying to see what happened as you interact with the git repository.
-		</p> 
+			When in the SAP WebIDE you'll find most of what you need in the Git Menu near the top right of the screen.
+			You'll also find the console towards the bottom right of the screen which can be very useful when trying to
+			see what happened as you interact with the git repository.
+		</p>
 		<img src="img/concepts_001.png" alt="concepts_001">
 		<p>
-			A great way to see if you've successfully pushed your changes to the remote repository is to  download the Git desktop client and clone the repositroy from there. Once you have the files on your desktop you can open them in your favourite IDE and see if your changes are there. 
+			A great way to see if you've successfully pushed your changes to the remote repository is to download the
+			Git desktop client and clone the repositroy from there. Once you have the files on your desktop you can open
+			them in your favourite IDE and see if your changes are there.
 		</p>
 		<img src="img/concepts_002.png" alt="concepts_002">
 		<p>
-			When creating a new UI5 app the web IDE will create a remote repository for you. This URL is what will be used when you <code>set remote</code> your newly created repository with the remote repository on GitHubs servers.
+			When creating a new UI5 app the web IDE will create a remote repository for you. This URL is what will be
+			used when you <code>set remote</code> your newly created repository with the remote repository on GitHubs
+			servers.
 		</p>
 		<img src="img/concepts_003.png" alt="concepts_003">
 		<p>
-			In the SAP Cloud Platform Cockpit you'll find the remote Git repository link under the versioning section after you've clicked on the HTML5 app itself.
-		<img src="img/concepts_004.png" alt="concepts_004">
+			In the SAP Cloud Platform Cockpit you'll find the remote Git repository link under the versioning section
+			after you've clicked on the HTML5 app itself.
+			<img src="img/concepts_004.png" alt="concepts_004">
 	</div>
 
 	<div class="scrollblock block-initial_creation">
@@ -98,9 +133,7 @@
 		<img src="img/push_001.png" alt="push_001">
 		<img src="img/push_002.png" alt="push_002">
 		<img src="img/push_003.png" alt="push_003">
-		<p>Now your changes should be available to any other developers. For them to see your changes they will need to 
+		<p>Now your changes should be available to any other developers. For them to see your changes they will need to
 			<code>pull</code> them into their own local repositories.
 		</p>
 	</div>
-
-
